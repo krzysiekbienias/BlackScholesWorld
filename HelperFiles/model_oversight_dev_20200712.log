@@ -1,0 +1,21 @@
+2020-07-12 13:23:53 [mos_util_main:20]INFO--Initializing Model Oversight Utils
+2020-07-12 13:26:04 [mos_util_main:20]INFO--Initializing Model Oversight Utils
+2020-07-12 13:40:14 [mos_util_main:20]INFO--Initializing Test Case
+2020-07-12 13:42:24 [mos_util_main:20]INFO--Initializing Test Case
+2020-07-12 13:42:24 [common_util:29]INFO--APP_PARAMS: ['x=2']
+2020-07-12 13:42:24 [mos_util_main:15]INFO--Triggering App: TEST
+2020-07-12 13:44:47 [mos_util_main:20]INFO--Initializing Test Case
+2020-07-12 13:44:47 [common_util:29]INFO--APP_PARAMS: ['x=2']
+2020-07-12 13:44:47 [mos_util_main:15]INFO--Triggering App: TEST
+2020-07-12 13:47:17 [mos_util_main:20]INFO--Initializing Test Case
+2020-07-12 13:47:17 [common_util:29]INFO--APP_PARAMS: ['x=2']
+2020-07-12 13:47:17 [mos_util_main:15]INFO--Triggering App: TEST
+2020-07-12 13:48:08 [mos_util_main:20]INFO--Initializing Test Case
+2020-07-12 13:48:08 [common_util:29]INFO--APP_PARAMS: ['x=2']
+2020-07-12 13:48:08 [mos_util_main:15]INFO--Triggering App: TEST
+2020-07-12 13:48:08 [calulator:7]INFO--lalala
+2020-07-12 13:48:47 [mos_util_main:20]INFO--Initializing Test Case
+2020-07-12 13:48:47 [common_util:29]INFO--APP_PARAMS: ['x=2']
+2020-07-12 13:48:47 [mos_util_main:15]INFO--Triggering App: TEST
+2020-07-12 13:48:47 [calulator:7]INFO--lalala
+2020-07-12 13:48:47 [common_util:64]INFO--Time taken to complete app TEST:::0.000762939453125
