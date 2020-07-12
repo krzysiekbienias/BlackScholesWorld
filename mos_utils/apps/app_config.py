@@ -11,6 +11,7 @@ class AppConfig:
 
     def __init__(self):
         self.app_config_dict['TEST']=FunRun
+        self.app_config_dict['ANALYTICAL_PRICE']=AnalyticalRun
 
     def get_app(self,arg_app_name):
         """Returns the app based on the name
