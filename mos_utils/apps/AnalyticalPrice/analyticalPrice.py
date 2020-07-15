@@ -12,8 +12,12 @@ import xlsxwriter
 
 from mos_utils.utils.CalendarManagment.calendar_ql_supported import SetUpSchedule
 from mos_utils.apps.base_app import BaseApp
+from mos_utils.utils.ExcelUtils.excelUtils import ExcelFilesDetails,CreateDataFrame,OutputInExcel
+from mos_utils.utils.quantLibUtil import QuantLibConverter
+import mos_utils.utils.logging_util as l_util
 
 
+logger=l_util.get_logger(__name__)
 
 class Check_Arguments(ValueError):
     pass
@@ -91,17 +95,25 @@ class AnalyticBlackScholes(SetUpSchedule):
 class AnalyticalRun(BaseApp):
     def __init__(self, **app_params):
         app_name='analytical_price'
-        self._tabName=''
+        """we populate input from excel"""
+        self._tab_name1=''
+        self._tab_name2 =''
+        self._tab_name3 =''
+        super().__init__(app_name, app_params)
 
 
 
     def run(self):
-        controlPath = '/Users/krzysiekbienias/Downloads/ControlFiles'
+        controlPath = '/Users/krzysiekbienias/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/BlackScholesWorld/HelperFiles'
         os.chdir(controlPath)
 
         loadControlFile = CreateDataFrame(file_name='OptionPrice.xlsx')
 
         dictionaryOfControlFile = loadControlFile.create_data_frame_from_excel()
+        controlFile3m = dictionaryOfControlFile[self._tab_name1]
+
+        qlConverter = QuantLibConverter(calendar=controlFile3m.loc[4, 'Value'])
+
 
         o_black_scholes_3m = AnalyticBlackScholes(valuation_date=controlFile3m.loc[0, 'Value'],
                                                   termination_date=controlFile3m.loc[1, 'Value'],
@@ -119,7 +131,8 @@ class AnalyticalRun(BaseApp):
                                                   ann_risk_free_rate=controlFile3m.loc[12, 'Value'],
                                                   ann_volatility=controlFile3m.loc[13, 'Value'],
                                                   ann_dividend=controlFile3m.loc[14, 'Value'])
-                                                )
+        logger.info(f'We have defined one black scholes object')
+
 
 
 

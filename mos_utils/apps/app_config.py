@@ -1,5 +1,6 @@
 import os
 from mos_utils.apps.Test.calulator import FunRun
+from mos_utils.apps.AnalyticalPrice.analyticalPrice import AnalyticalRun
 
 
 curr_file_path=os.path.abspath(os.path.dirname(__file__))
