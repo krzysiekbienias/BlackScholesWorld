@@ -131,7 +131,21 @@ class AnalyticalRun(BaseApp):
                                                   ann_risk_free_rate=controlFile3m.loc[12, 'Value'],
                                                   ann_volatility=controlFile3m.loc[13, 'Value'],
                                                   ann_dividend=controlFile3m.loc[14, 'Value'])
-        logger.info(f'We have defined one black scholes object')
+        logger.info(f'We have defined one black scholes object For 3 months option')
+        logger.info(f'Current Price of underlying asset = {o_black_scholes_3m._S0}.')
+
+        logger.info(f' Annual volatility on the market is equal {o_black_scholes_3m._sigma}.')
+        logger.info(f' Annual risk on the market is equal {o_black_scholes_3m._r}.')
+        logger.info(f'Price is found on date {o_black_scholes_3m._svaluation_date}')
+        logger.info(f'Price is found on date {o_black_scholes_3m._stermination_date}')
+        logger.info(f'Annuity is calculated based on {o_black_scholes_3m.m_day_count} convention')
+        logger.info(f'Year fraction for this contract is equal {o_black_scholes_3m.consecutive_year_fractions()}')
+
+
+        logger.info(f' Analytical price of {o_black_scholes_3m._type_option} is equal {o_black_scholes_3m.mblprice}.')
+
+
+
 
 
 

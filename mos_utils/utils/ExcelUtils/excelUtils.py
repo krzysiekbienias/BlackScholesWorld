@@ -9,6 +9,7 @@ from typing import List
 import xlsxwriter
 import xlrd
 from openpyxl import Workbook
+from openpyxl import load_workbook
 from openpyxl.workbook.workbook import save_workbook
 from openpyxl.utils import get_column_letter
 import getpass
@@ -142,6 +143,47 @@ class OutputInExcel:
                     ldfToSave[i].to_excel(oDataToExcel, sheet_name=self._lsSheetName[i])
                     oDataToExcel.save()
                     oDataToExcel.close()
+
+    def appendDfToExisingExel(self,filename,fileLocation,df,sheet_name,startrow=None,truncate_sheet=False,startcol=None):
+
+        """Append a DataFrame [df] to existing Excel file [filename] into Sheet[sheet_name]
+               If [filename] does not exist then this function will create it.
+
+            Returns: None
+
+            ."""
+        os.chdir(fileLocation)
+        writer=pd.ExcelWriter(filename,engine='openpyxl')
+        try:
+            FileNotFoundError
+        except NameError:
+            FileNotFoundError=IOError
+        try:
+            #try to open an existing workbook
+            writer.book=load_workbook(filename)
+            if startrow is None and sheet_name in writer.book.sheetnames:
+                startrow=writer.book.sheetnames.max_row
+            if truncate_sheet and sheet_name in writer.book.sheetnames:
+                # index of [sheet_name] sheet
+
+                idx=writer.book.sheetnames.index(sheet_name)
+                #remove [sheet_name]
+                writer.book.remove(writer.book.worksheets[idx])
+                #create an empty sheet [sheet_name] using old index
+                writer.book.create_sheet(sheet_name,idx)
+            writer.sheets={ws.title: ws for ws in writer.book.worksheets}
+        except FileNotFoundError:
+            #file does not exist yet, we will create it
+            pass
+        if startrow is None:
+            startrow=0
+        df.to_excel(writer,sheet_name,startrow=startrow,startcol=startcol,header=False,index=False)
+        ws=writer.book['pass tab name for futher modification']
+        for i in range(1,len(df+2)):
+            cell=ws.cell(column=2,row=i)
+            cell.number_format=...
+        writer.save()
+
 
 
 if __name__ == "__main__":

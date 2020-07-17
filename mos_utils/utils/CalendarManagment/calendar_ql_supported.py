@@ -30,8 +30,7 @@ class SetUpSchedule():
         self.ml_yf = self.consecutive_year_fractions()  # two consecutive dates year fraction
         self.mf_yf_between_valu_date_and_maturity = self.year_fraction_between_valuation_and_maturity()
 
-        self.ml_yf = self.consecutive_year_fractions()  # two consecutive dates year fraction
-        self.mf_yf_between_valu_date_and_maturity = self.year_fraction_between_valuation_and_maturity()
+
 
     def stringIntoDateTime(self, s_Date):
         truncateDate = s_Date[:10]
