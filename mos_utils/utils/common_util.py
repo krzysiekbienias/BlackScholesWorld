@@ -73,12 +73,15 @@ class AppException(Exception):
         self.additional_info=additional_info
         super(AppException, self).__init__(message)
 
-def load_cfg(arg_cfg_type,arg_cfg_file):
+def load_cfg(arg_cfg_type,arg_cfg_file,yaml_loader=yaml.BaseLoader,yaml_load_type='safe_load'):
     cfg_obj=None
     if os.path.exists(arg_cfg_file):
         if arg_cfg_file=='yaml':
             with open(arg_cfg_file,mode='r') as f:
-                cfg_obj=yaml_1.safe_load(f)
+                if yaml_load_type=='safe_load':
+                    cfg_obj=yaml.safe_load(f)
+                else:
+                    cfg_obj=yaml.load(f,Loader=yaml_loader)
         else:
             error_msg='Config type ::{0} not supported. Only .yaml are supported'.format(arg_cfg_type)
             logger.error(error_msg)
@@ -110,6 +113,10 @@ def evaluate_sql(sql_file,param_dict):
             ret_query=ret_query.replace('--','')
             ret_query=ret_query.format(**param_dict)
     return ret_query
+
+def rename_keys_lowercase(arg_dict:dict):
+    keys_list=[f'_{x.lower()}' for x in arg_dict.keys()]
+    return dict(zip(keys_list,list(arg_dict.values())))
 
 
 
