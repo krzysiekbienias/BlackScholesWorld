@@ -9,7 +9,7 @@ logger=l_util.get_logger(__name__)
 """
 --APP_NAME=CHECK_INPUT
 --APP_PARAMS
-TAB_NAME=
+TAB_NAME=Input_3M
 FILE_DIRECTORY=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/HelperFiles
 FILE_NAME=OptionPrice.xlsx
 """
@@ -22,7 +22,10 @@ class CheckInputRun(BaseApp):
         self._file_directory=''
         self._file_name=''
         super().__init__(app_name, app_params)
+        ############################################----MEMBERS----#################################################
         self.paramDict = self.convertToDict()
+        self.paramCheck=self.checkCorectness()
+        ############################################----MEMBERS----#################################################
 
     def convertToDict(self):
         controlPath = self._file_directory
@@ -30,16 +33,18 @@ class CheckInputRun(BaseApp):
 
         loadInputFiles = CreateDataFrame(file_name=self._file_name)
 
-        dfOfInput = loadInputFiles.create_data_frame_from_excel()
-        dfOfInput.to_dict()
+        dicOfInputWholeFile = loadInputFiles.create_data_frame_from_excel()
+        dfOfInputOneTab=dicOfInputWholeFile[self._tab_name]
+        return dfOfInputOneTab.to_dict()
+
+    def checkCorectness(self):
+        bucket=self.paramDict
+        if bucket['Value'][9] not in ['call','put']:
+            logger.info('You put wrong option type name. You may only chose call or put parameter')
+        else:
+            logger.info(f'Type option has been defined correctly.')
 
 
-
-
-    def run(self):
-
-
-        logger.info("Check input parameters")
 
 
 
