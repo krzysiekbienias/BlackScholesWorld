@@ -2,6 +2,7 @@ import os
 from mos_utils.apps.Test.calulator import FunRun
 from mos_utils.apps.AnalyticalPrice.analyticalPrice import AnalyticalRun
 from mos_utils.utils.checkingInputUtil import CheckInputRun
+from mos_utils.apps.MonteCarloSimulation.scenario_generator import ScenarioEquityRun
 
 
 curr_file_path=os.path.abspath(os.path.dirname(__file__))
@@ -15,6 +16,7 @@ class AppConfig:
         self.app_config_dict['TEST']=FunRun
         self.app_config_dict['ANALYTICAL_PRICE']=AnalyticalRun
         self.app_config_dict['CHECK_INPUT']=CheckInputRun
+        self.app_config_dict['EQUITY_SIMULATION']=ScenarioEquityRun
 
     def get_app(self,arg_app_name):
         """Returns the app based on the name
