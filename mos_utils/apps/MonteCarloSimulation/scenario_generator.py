@@ -17,13 +17,13 @@ from mos_utils.utils.ExcelUtils.excelUtils import ExcelFilesDetails,CreateDataFr
 from mos_utils.utils.quantLibUtil import QuantLibConverter
 import mos_utils.utils.logging_util as l_util
 
-from mos_utils.apps.base_app import BaseApp
+
 
 # controlPath = '/Users/krzysiekbienias/Downloads/ControlFiles'
 # os.chdir(controlPath)
 # controlFile = pd.read_excel('BlackScholes.xlsx', sheet_name='Input')
 
-
+logger=l_util.get_logger(__name__)
 
 
 
@@ -101,7 +101,7 @@ class EquityModels(SetUpSchedule):
 
 class ScenarioEquityRun(BaseApp):
         def __init__(self, **app_params):
-            app_name = 'analytical_price'
+            app_name = 'equity_simulation'
             """we populate input from excel"""
             self._tab_name = ''
 
@@ -135,5 +135,10 @@ class ScenarioEquityRun(BaseApp):
                                               ann_volatility=controlFile.loc[13, 'Value'],
                                               ann_dividend=controlFile.loc[14, 'Value'],
                                               runs=controlFile.loc[15, 'Value'])
+
+            logger.info(f'Monte Carlo Price is equal {o_black_scholes_scenarios.mf_monte_carlo_price}')
+
+
+
 
 
