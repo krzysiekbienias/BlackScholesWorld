@@ -144,7 +144,7 @@ class ScenarioEquityRun(BaseApp):
                                               runs=controlFile.loc[15, 'Value'])
             self.plotEquityPaths(arr=equity_scenarios.m_ar_equity_price)
             excelModificatio=OutputInExcel()
-            excelModificatio.appendDfToExisingExcel(filename='OptionPrice.xlsx')
+            excelModificatio.modifyExistingFile(filename='OptionPrice.xlsx',fileLocation=controlPath,rowLocation=2,colLocation=4,cellValue=equity_scenarios.)
 
 
 

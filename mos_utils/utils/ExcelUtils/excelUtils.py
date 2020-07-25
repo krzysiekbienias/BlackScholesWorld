@@ -162,7 +162,7 @@ class OutputInExcel:
         try:
             #try to open an existing workbook
             writer.book=load_workbook(filename)
-            if startrow is None and sheet_name in writer.book.sheetnames:
+            if startrow is None and sheet_name in writer.book.sheetnames :
                 startrow=writer.book.sheetnames.max_row
             if truncate_sheet and sheet_name in writer.book.sheetnames:
                 # index of [sheet_name] sheet
@@ -182,11 +182,31 @@ class OutputInExcel:
             logger.info('You have not define any data frame to add to existing file but you still may format and modify the file.')
         else:
             df.to_excel(writer,sheet_name,startrow=startrow,startcol=startcol,header=False,index=False)
-        # ws=writer.book['pass tab name for futher modification']
-        # for i in range(1,len(df+2)):
-        #     cell=ws.cell(column=2,row=i)
-        #     cell.number_format=...
+        #ws=writer.book[sheet_name]
+
         writer.save()
+
+    def modifyExistingFile(self,filename,fileLocation,cellValue,rowLocation,colLocation):
+
+        """Append a DataFrame [df] to existing Excel file [filename] into Sheet[sheet_name]
+               If [filename] does not exist then this function will create it.
+
+            Returns: None
+
+            ."""
+        os.chdir(fileLocation)
+        book = load_workbook(filename)
+        writer = pd.ExcelWriter(filename, engine='openpyxl')
+        writer.book = book
+        ltabs=writer.book.sheetnames
+        logger.info(f'File contains following tabs {ltabs}')
+        book=writer.book['Scenario Generator']
+        book.cell(row=rowLocation,column=colLocation).value=cellValue
+        writer.save()
+
+
+
+
 
 
 
