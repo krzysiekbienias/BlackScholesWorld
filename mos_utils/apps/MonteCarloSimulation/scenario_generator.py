@@ -104,8 +104,15 @@ class ScenarioEquityRun(BaseApp):
             app_name = 'equity_simulation'
             """we populate input from excel"""
             self._tab_name = ''
+            self._paths_to_plot=''
 
             super().__init__(app_name, app_params)
+
+        def plotEquityPaths(self,arr):
+            for i in range(int(self._paths_to_plot)):
+                plt.plot(arr[:,i],label='Equity Scenario')
+            plt.savefig('OptionPrice.png')
+
 
         def run(self):
             controlPath = '/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/HelperFiles'
@@ -118,7 +125,7 @@ class ScenarioEquityRun(BaseApp):
 
             qlConverter = QuantLibConverter(calendar=controlFile.loc[4, 'Value'])
 
-            o_black_scholes_scenarios = EquityModels(valuation_date=controlFile.loc[0, 'Value'],
+            equity_scenarios = EquityModels(valuation_date=controlFile.loc[0, 'Value'],
                                              termination_date=controlFile.loc[1, 'Value'],
                                               schedule_freq=controlFile.loc[2, 'Value'],
                                               convention=controlFile.loc[3, 'Value'],  # Daily,Monthly,Quarterly
@@ -135,8 +142,16 @@ class ScenarioEquityRun(BaseApp):
                                               ann_volatility=controlFile.loc[13, 'Value'],
                                               ann_dividend=controlFile.loc[14, 'Value'],
                                               runs=controlFile.loc[15, 'Value'])
+            self.plotEquityPaths(arr=equity_scenarios.m_ar_equity_price)
+            excelModificatio=OutputInExcel()
+            excelModificatio.appendDfToExisingExcel(filename='OptionPrice.xlsx')
 
-            logger.info(f'Monte Carlo Price is equal {o_black_scholes_scenarios.mf_monte_carlo_price}')
+
+
+            logger.info(f'Monte Carlo Price is equal ({round(equity_scenarios.mf_monte_carlo_price,3)})')
+
+
+
 
 
 

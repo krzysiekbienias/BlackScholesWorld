@@ -14,7 +14,8 @@ from openpyxl.workbook.workbook import save_workbook
 from openpyxl.utils import get_column_letter
 import getpass
 
-
+import mos_utils.utils.logging_util as l_util
+logger=l_util.get_logger(__name__)
 
 class ExcelFilesDetails():
     def __init__(self, input_path: str, suffix: str):
@@ -111,7 +112,7 @@ class CreateDataFrame:
         return modified_df
 
 class OutputInExcel:
-    def __init__(self, FileName, SheetNames, Path):
+    def __init__(self, FileName=None, SheetNames=None, Path=None):
         self._sFileName = FileName
         self._lsSheetName = SheetNames
         self._sPath = Path
@@ -144,7 +145,7 @@ class OutputInExcel:
                     oDataToExcel.save()
                     oDataToExcel.close()
 
-    def appendDfToExisingExel(self,filename,fileLocation,df,sheet_name,startrow=None,truncate_sheet=False,startcol=None):
+    def appendDfToExisingExcel(self,filename,fileLocation,sheet_name,df=None,startrow=None,truncate_sheet=False,startcol=None):
 
         """Append a DataFrame [df] to existing Excel file [filename] into Sheet[sheet_name]
                If [filename] does not exist then this function will create it.
@@ -177,11 +178,14 @@ class OutputInExcel:
             pass
         if startrow is None:
             startrow=0
-        df.to_excel(writer,sheet_name,startrow=startrow,startcol=startcol,header=False,index=False)
-        ws=writer.book['pass tab name for futher modification']
-        for i in range(1,len(df+2)):
-            cell=ws.cell(column=2,row=i)
-            cell.number_format=...
+        if df is None:
+            logger.info('You have not define any data frame to add to existing file but you still may format and modify the file.')
+        else:
+            df.to_excel(writer,sheet_name,startrow=startrow,startcol=startcol,header=False,index=False)
+        # ws=writer.book['pass tab name for futher modification']
+        # for i in range(1,len(df+2)):
+        #     cell=ws.cell(column=2,row=i)
+        #     cell.number_format=...
         writer.save()
 
 
