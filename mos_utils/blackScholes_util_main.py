@@ -21,3 +21,16 @@ if __name__=="__main__":
     user_opts=c_util.UserOpts()
     main(user_opts.app_name)
 
+
+"""
+--APP_NAME=ANALYTICAL_PRICE
+--APP_PARAMS
+RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml
+"""
+
+"""
+--APP_NAME=EQUITY_SIMULATION
+--APP_PARAMS
+RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/scenario_generator_conf.yaml
+"""
+

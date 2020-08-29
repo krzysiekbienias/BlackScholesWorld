@@ -76,7 +76,7 @@ class AppException(Exception):
 def load_cfg(arg_cfg_type,arg_cfg_file,yaml_loader=yaml.BaseLoader,yaml_load_type='safe_load'):
     cfg_obj=None
     if os.path.exists(arg_cfg_file):
-        if arg_cfg_file=='yaml':
+        if arg_cfg_type=='yaml':
             with open(arg_cfg_file,mode='r') as f:
                 if yaml_load_type=='safe_load':
                     cfg_obj=yaml.safe_load(f)

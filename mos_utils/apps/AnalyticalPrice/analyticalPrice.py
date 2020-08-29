@@ -92,6 +92,16 @@ class AnalyticBlackScholes(SetUpSchedule):
                 -self.d1_fun(), 0, 1)
         return price
 
+
+##Configuration
+"""
+--APP_NAME=ANALYTICAL_PRICE
+--APP_PARAMS
+RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml
+"""
+
+
+
 class AnalyticalRun(BaseApp):
     def __init__(self, **app_params):
         app_name='analytical_price'
@@ -104,7 +114,7 @@ class AnalyticalRun(BaseApp):
 
 
     def run(self):
-        controlPath = '/Users/krzysiekbienias/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/BlackScholesWorld/HelperFiles'
+        controlPath = '/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/HelperFiles'
         os.chdir(controlPath)
 
         loadControlFile = CreateDataFrame(file_name='OptionPrice.xlsx')
