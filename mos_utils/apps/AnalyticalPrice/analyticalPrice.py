@@ -110,6 +110,8 @@ class AnalyticalRun(BaseApp):
         loadControlFile = CreateDataFrame(file_name='OptionPrice.xlsx')
 
         dictionaryOfControlFile = loadControlFile.create_data_frame_from_excel()
+
+        ######################################----3Month Option Setting----############################
         controlFile3m = dictionaryOfControlFile[self._tab_name1]
 
         qlConverter = QuantLibConverter(calendar=controlFile3m.loc[4, 'Value'])
@@ -140,9 +142,48 @@ class AnalyticalRun(BaseApp):
         logger.info(f'Price is found on date {o_black_scholes_3m._stermination_date}')
         logger.info(f'Annuity is calculated based on {o_black_scholes_3m.m_day_count} convention')
         logger.info(f'Year fraction for this contract is equal {o_black_scholes_3m.consecutive_year_fractions()}')
-
-
         logger.info(f' Analytical price of {o_black_scholes_3m._type_option} is equal {o_black_scholes_3m.mblprice}.')
+        ######################################----3Month Option Setting----############################
+
+
+        ######################################----6Month Option Setting----############################
+        controlFile6m = dictionaryOfControlFile[self._tab_name2]
+        qlConverter = QuantLibConverter(calendar=controlFile6m.loc[4, 'Value'])
+
+        o_black_scholes_6m = AnalyticBlackScholes(valuation_date=controlFile6m.loc[0, 'Value'],
+                                                  termination_date=controlFile6m.loc[1, 'Value'],
+                                                  schedule_freq=controlFile6m.loc[2, 'Value'],
+                                                  convention=controlFile6m.loc[3, 'Value'],  # Daily,Monthly,Quarterly
+                                                  calendar=qlConverter.mqlCalendar,
+                                                  business_convention=qlConverter.mqlBusinessConvention,
+                                                  termination_business_convention=qlConverter.mqlTerminationBusinessConvention,
+                                                  date_generation=ql.DateGeneration.Forward,
+                                                  end_of_month=controlFile6m.loc[8, 'Value'],
+                                                  ##################################
+                                                  type_option=controlFile6m.loc[9, 'Value'],
+                                                  current_price=controlFile6m.loc[10, 'Value'],
+                                                  strike=controlFile6m.loc[11, 'Value'],
+                                                  ann_risk_free_rate=controlFile6m.loc[12, 'Value'],
+                                                  ann_volatility=controlFile6m.loc[13, 'Value'],
+                                                  ann_dividend=controlFile6m.loc[14, 'Value'])
+        logger.info(f'We have defined one black scholes object For 3 months option')
+        logger.info(f'Current Price of underlying asset = {o_black_scholes_6m._S0}.')
+
+        logger.info(f' Annual volatility on the market is equal {o_black_scholes_6m._sigma}.')
+        logger.info(f' Annual risk on the market is equal {o_black_scholes_6m._r}.')
+        logger.info(f'Price is found on date {o_black_scholes_6m._svaluation_date}')
+        logger.info(f'Price is found on date {o_black_scholes_6m._stermination_date}')
+        logger.info(f'Annuity is calculated based on {o_black_scholes_6m.m_day_count} convention')
+        logger.info(f'Year fraction for this contract is equal {o_black_scholes_6m.consecutive_year_fractions()}')
+
+        logger.info(f' Analytical price of {o_black_scholes_6m._type_option} is equal {o_black_scholes_6m.mblprice}.')
+        ######################################----6Month Option Setting----############################
+
+
+        #excelExport=OutputInExcel(FileName='OptionPrice',SheetNames=['Input_3M','Input_6M'],Path=controlPath)
+
+
+
 
 
 

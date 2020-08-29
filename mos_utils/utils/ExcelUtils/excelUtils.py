@@ -184,6 +184,12 @@ class OutputInExcel:
             cell.number_format=...
         writer.save()
 
+    def flexibleInput(self,cellAdress,value):
+        workbook = xlsxwriter.Workbook(self._sFileName)
+        worksheet=workbook.add_worksheet(self._lsSheetName)
+        worksheet.write(cellAdress,value)
+        workbook.close()
+
 
 
 if __name__ == "__main__":
@@ -193,6 +199,8 @@ if __name__ == "__main__":
     workbook = xlsxwriter.Workbook('test.xlsx')
     worksheet = workbook.add_worksheet('test1')
     worksheet.write('A3', 5)
+    worksheet.write('A5', 6)
+
     workbook.close()
     #
 
