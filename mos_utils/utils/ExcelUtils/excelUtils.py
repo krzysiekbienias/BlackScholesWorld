@@ -111,7 +111,7 @@ class CreateDataFrame:
         return modified_df
 
 class OutputInExcel:
-    def __init__(self, FileName, SheetNames, Path):
+    def __init__(self, FileName, Path,SheetNames=None):
         self._sFileName = FileName
         self._lsSheetName = SheetNames
         self._sPath = Path
@@ -178,34 +178,24 @@ class OutputInExcel:
         if startrow is None:
             startrow=0
         df.to_excel(writer,sheet_name,startrow=startrow,startcol=startcol,header=False,index=False)
-        ws=writer.book['pass tab name for futher modification']
-        for i in range(1,len(df+2)):
-            cell=ws.cell(column=2,row=i)
-            cell.number_format=...
+        ws=writer.book['INPUT_3M']
+
+        cell=ws.cell(column=6,row=2)
+        cell=5
+
         writer.save()
 
-    def flexibleInput(self,cellAdress,value):
-        workbook = xlsxwriter.Workbook(self._sFileName)
-        worksheet=workbook.add_worksheet(self._lsSheetName)
-        worksheet.write(cellAdress,value)
-        workbook.close()
+    def flexibleInsertingInput(self,cell_row,cell_col,value,tab_name):
+
+            writer = pd.ExcelWriter(self._sFileName, engine='openpyxl')
+            writer.book = load_workbook(self._sFileName)
+            ws = writer.book[tab_name]
+
+            cell=ws.cell(column=cell_col,row=cell_row)
+            cell.value=value
+            writer.save()
 
 
 
 if __name__ == "__main__":
-    controlPath = '/Users/krzysiekbienias/Downloads/ControlFiles'
-    os.chdir(controlPath)
-
-    workbook = xlsxwriter.Workbook('test.xlsx')
-    worksheet = workbook.add_worksheet('test1')
-    worksheet.write('A3', 5)
-    worksheet.write('A5', 6)
-
-    workbook.close()
-    #
-
-    # source = fileForUploading.get_sheet_by_name('test1')
-    # source['D2'] = 3  # cellLocation=A2
-    # source.save('test.xlsx')
-    # fileForUploading.close()
-    #
+    pass

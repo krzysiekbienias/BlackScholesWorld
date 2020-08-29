@@ -1,5 +1,5 @@
 import os
-from mos_utils.apps.Test.calulator import FunRun
+
 from mos_utils.apps.AnalyticalPrice.analyticalPrice import AnalyticalRun
 from mos_utils.utils.checkingInputUtil import CheckInputRun
 from mos_utils.apps.MonteCarloSimulation.scenario_generator import ScenarioEquityRun
@@ -13,7 +13,6 @@ class AppConfig:
     app_config_dict=dict()
 
     def __init__(self):
-        self.app_config_dict['TEST']=FunRun
         self.app_config_dict['ANALYTICAL_PRICE']=AnalyticalRun
         self.app_config_dict['CHECK_INPUT']=CheckInputRun
         self.app_config_dict['EQUITY_SIMULATION']=ScenarioEquityRun

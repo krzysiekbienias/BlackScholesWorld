@@ -189,8 +189,10 @@ class AnalyticalRun(BaseApp):
         logger.info(f' Analytical price of {o_black_scholes_6m._type_option} is equal {o_black_scholes_6m.mblprice}.')
         ######################################----6Month Option Setting----############################
 
+        excelExport = OutputInExcel(FileName='OptionPrice.xlsx', Path=controlPath)
 
-        #excelExport=OutputInExcel(FileName='OptionPrice',SheetNames=['Input_3M','Input_6M'],Path=controlPath)
+        excelExport.flexibleInsertingInput(cell_col=6, cell_row=1, value=o_black_scholes_6m.mblprice[0], tab_name='INPUT_6M')
+
 
 
 
