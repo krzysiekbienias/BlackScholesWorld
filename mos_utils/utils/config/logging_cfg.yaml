@@ -19,7 +19,7 @@ handlers:
     level: DEBUG
     formatter: custom
     filename: model_oversight_dev_{date}.log
-    file_path: /Users/krzysiekbienias/Documents/GitHub/ProjectDesing/HelperFiles
+    file_path: /Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/HelperFiles
     max_bytes: 10485760 #10MB
     backup_count: 20
     encoding: utf8

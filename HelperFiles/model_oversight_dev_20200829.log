@@ -1,0 +1,423 @@
+2020-08-29 12:13:28 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:13:28 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:13:28 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 12:14:27 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:14:27 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:14:27 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 12:16:57 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:16:57 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:16:57 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 12:17:41 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:17:41 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:17:41 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 12:18:02 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:18:02 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:18:02 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 12:23:13 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:23:13 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:23:13 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 12:24:35 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:24:35 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/scenario_generator_conf.yaml']
+2020-08-29 12:24:35 [blackScholes_util_main:15]INFO--Triggering App: EQUITY_SIMULATION
+2020-08-29 12:24:36 [_base:2515]DEBUG--update_title_pos
+2020-08-29 12:24:36 [font_manager:1254]DEBUG--findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
+2020-08-29 12:33:01 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:33:01 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:33:01 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 12:35:12 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:35:12 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:35:12 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 12:35:13 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 12:35:13 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 12:35:13 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 12:35:13 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 12:35:13 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 12:35:13 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 12:35:13 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 12:35:13 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 12:35:13 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 12:35:13 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 12:35:13 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 12:35:13 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 12:35:13 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 12:35:13 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 12:35:13 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 12:35:13 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 12:35:13 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 12:35:13 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 12:35:13 [common_util:64]INFO--Time taken to complete app ANALYTICAL_PRICE:::0.25639915466308594
+2020-08-29 12:35:54 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:35:54 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:35:54 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 12:35:54 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 12:35:54 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 12:35:54 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 12:35:54 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 12:35:54 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 12:35:54 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 12:35:54 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 12:35:54 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 12:35:54 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 12:35:54 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 12:35:54 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 12:35:54 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 12:35:54 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 12:35:54 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 12:35:54 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 12:35:54 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 12:35:54 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 12:35:54 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 12:35:54 [common_util:64]INFO--Time taken to complete app ANALYTICAL_PRICE:::0.27979183197021484
+2020-08-29 12:38:12 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:38:12 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:38:12 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 12:38:12 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 12:38:12 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 12:38:12 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 12:38:12 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 12:38:12 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 12:38:12 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 12:38:12 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 12:38:12 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 12:38:12 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 12:38:12 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 12:38:12 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 12:38:12 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 12:38:12 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 12:38:12 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 12:38:12 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 12:38:12 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 12:38:12 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 12:38:12 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 12:40:07 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:40:07 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:40:07 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 12:40:07 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 12:40:07 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 12:40:07 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 12:40:07 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 12:40:07 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 12:40:07 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 12:40:07 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 12:40:07 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 12:40:07 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 12:40:07 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 12:40:07 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 12:40:07 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 12:40:07 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 12:40:07 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 12:40:07 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 12:40:07 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 12:40:07 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 12:40:07 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 12:41:14 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:41:14 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:41:14 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 12:41:15 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 12:41:15 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 12:41:15 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 12:41:15 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 12:41:15 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 12:41:15 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 12:41:15 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 12:41:15 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 12:41:15 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 12:41:15 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 12:41:15 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 12:41:15 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 12:41:15 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 12:41:15 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 12:41:15 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 12:41:15 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 12:41:15 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 12:41:15 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 12:42:20 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:42:20 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:42:20 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 12:42:21 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 12:42:21 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 12:42:21 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 12:42:21 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 12:42:21 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 12:42:21 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 12:42:21 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 12:42:21 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 12:42:21 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 12:42:21 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 12:42:21 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 12:42:21 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 12:42:21 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 12:42:21 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 12:42:21 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 12:42:21 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 12:42:21 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 12:42:21 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 12:42:21 [common_util:64]INFO--Time taken to complete app ANALYTICAL_PRICE:::0.26331496238708496
+2020-08-29 12:44:30 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:44:30 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:44:30 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 12:44:31 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 12:44:31 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 12:44:31 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 12:44:31 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 12:44:31 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 12:44:31 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 12:44:31 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 12:44:31 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 12:44:31 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 12:44:31 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 12:44:31 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 12:44:31 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 12:44:31 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 12:44:31 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 12:44:31 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 12:44:31 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 12:44:31 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 12:44:31 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 12:44:31 [common_util:64]INFO--Time taken to complete app ANALYTICAL_PRICE:::0.28499603271484375
+2020-08-29 12:44:47 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:44:47 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:44:47 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 12:58:39 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 12:58:39 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 12:58:39 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 13:01:25 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 13:01:25 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 13:01:25 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 13:01:25 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 13:01:25 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 13:01:25 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 13:01:25 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 13:01:25 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 13:01:25 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 13:01:25 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 13:01:25 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 13:01:25 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 13:01:25 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 13:01:25 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 13:01:25 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 13:01:25 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 13:01:25 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 13:01:25 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 13:01:25 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 13:01:25 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 13:01:25 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 13:01:25 [common_util:64]INFO--Time taken to complete app ANALYTICAL_PRICE:::0.22021818161010742
+2020-08-29 13:03:15 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 13:03:15 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 13:03:15 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 13:03:15 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 13:03:15 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 13:03:15 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 13:03:15 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 13:03:15 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 13:03:15 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 13:03:15 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 13:03:15 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 13:03:15 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 13:03:15 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 13:03:15 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 13:03:15 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 13:03:15 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 13:03:15 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 13:03:15 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 13:03:15 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 13:03:15 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 13:03:15 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 13:03:15 [common_util:64]INFO--Time taken to complete app ANALYTICAL_PRICE:::0.2861201763153076
+2020-08-29 13:03:43 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 13:03:43 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 13:03:43 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 13:03:43 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 13:03:43 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 13:03:43 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 13:03:43 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 13:03:43 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 13:03:43 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 13:03:43 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 13:03:43 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 13:03:43 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 13:03:43 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 13:03:43 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 13:03:43 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 13:03:43 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 13:03:43 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 13:03:43 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 13:03:43 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 13:03:43 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 13:03:43 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 13:03:43 [common_util:64]INFO--Time taken to complete app ANALYTICAL_PRICE:::0.2818179130554199
+2020-08-29 13:07:56 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 13:07:56 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 13:07:56 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 13:31:39 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 13:31:39 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 13:31:39 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 13:31:39 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 13:31:39 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 13:31:39 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 13:31:39 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 13:31:39 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 13:31:39 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 13:31:39 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 13:31:39 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 13:31:39 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 13:31:39 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 13:31:39 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 13:31:39 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 13:31:39 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 13:31:39 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 13:31:39 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 13:31:39 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 13:31:39 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 13:31:39 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 13:31:39 [common_util:64]INFO--Time taken to complete app ANALYTICAL_PRICE:::0.280332088470459
+2020-08-29 14:06:41 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 14:06:41 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 14:06:41 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 14:06:41 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 14:06:41 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 14:06:41 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 14:06:41 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 14:06:41 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 14:06:41 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 14:06:41 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 14:06:41 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 14:06:41 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 14:06:41 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 14:06:41 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 14:06:41 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 14:06:41 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 14:06:41 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 14:06:41 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 14:06:41 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 14:06:41 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 14:06:41 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 14:16:21 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 14:16:21 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 14:16:21 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 14:16:21 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 14:16:21 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 14:16:21 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 14:16:21 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 14:16:21 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 14:16:21 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 14:16:21 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 14:16:21 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 14:16:21 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 14:16:21 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 14:16:21 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 14:16:21 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 14:16:21 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 14:16:21 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 14:16:21 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 14:16:21 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 14:16:21 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 14:16:21 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 14:27:13 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 14:27:13 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 14:27:13 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 14:27:14 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 14:27:14 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 14:27:14 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 14:27:14 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 14:27:14 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 14:27:14 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 14:27:14 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 14:27:14 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 14:27:14 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 14:27:14 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 14:27:14 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 14:27:14 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 14:27:14 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 14:27:14 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 14:27:14 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 14:27:14 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 14:27:14 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 14:27:14 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 14:27:14 [common_util:64]INFO--Time taken to complete app ANALYTICAL_PRICE:::0.30919384956359863
+2020-08-29 14:29:37 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 14:29:37 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 14:29:37 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 14:29:37 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 14:29:37 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 14:29:37 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 14:29:37 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 14:29:37 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 14:29:37 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 14:29:37 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 14:29:37 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 14:29:37 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 14:29:37 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 14:29:37 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 14:29:37 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 14:29:37 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 14:29:37 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 14:29:37 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 14:29:37 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 14:29:37 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 14:29:37 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 14:30:44 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 14:30:44 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 14:30:44 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 14:30:44 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 14:30:44 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 14:30:44 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 14:30:44 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 14:30:44 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 14:30:44 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 14:30:44 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 14:30:44 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 14:30:44 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 14:30:44 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 14:30:44 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 14:30:44 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 14:30:44 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 14:30:44 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 14:30:44 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 14:30:44 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 14:30:44 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 14:30:44 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 14:31:25 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 14:31:25 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 14:31:25 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 14:31:31 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 14:31:31 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 14:31:31 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 14:31:32 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 14:31:32 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 14:31:32 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 14:31:32 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 14:31:32 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 14:31:32 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 14:31:32 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 14:31:32 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 14:31:32 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 14:31:32 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 14:31:32 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 14:31:32 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 14:31:32 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 14:31:32 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 14:31:32 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 14:32:11 [blackScholes_util_main:20]INFO--Initializing Test Case
+2020-08-29 14:32:11 [common_util:29]INFO--APP_PARAMS: ['RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/black_scholes_analytic.yaml']
+2020-08-29 14:32:11 [blackScholes_util_main:15]INFO--Triggering App: ANALYTICAL_PRICE
+2020-08-29 14:32:12 [analyticalPrice:146]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 14:32:12 [analyticalPrice:147]INFO--Current Price of underlying asset = 90.
+2020-08-29 14:32:12 [analyticalPrice:149]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 14:32:12 [analyticalPrice:150]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 14:32:12 [analyticalPrice:151]INFO--Price is found on date 2019-11-25
+2020-08-29 14:32:12 [analyticalPrice:152]INFO--Price is found on date 2020-02-20
+2020-08-29 14:32:12 [analyticalPrice:153]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 14:32:12 [analyticalPrice:154]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 14:32:12 [analyticalPrice:155]INFO-- Analytical price of nan is equal [3.9415469].
+2020-08-29 14:32:12 [analyticalPrice:179]INFO--We have defined one black scholes object For 3 months option
+2020-08-29 14:32:12 [analyticalPrice:180]INFO--Current Price of underlying asset = 90.
+2020-08-29 14:32:12 [analyticalPrice:182]INFO-- Annual volatility on the market is equal 0.23.
+2020-08-29 14:32:12 [analyticalPrice:183]INFO-- Annual risk on the market is equal 0.1.
+2020-08-29 14:32:12 [analyticalPrice:184]INFO--Price is found on date 2019-11-25
+2020-08-29 14:32:12 [analyticalPrice:185]INFO--Price is found on date 2020-02-20
+2020-08-29 14:32:12 [analyticalPrice:186]INFO--Annuity is calculated based on Actual/Actual (ISDA) day counter convention
+2020-08-29 14:32:12 [analyticalPrice:187]INFO--Year fraction for this contract is equal [0.23798188487162214]
+2020-08-29 14:32:12 [analyticalPrice:189]INFO-- Analytical price of call is equal [4.1051334].
+2020-08-29 14:32:12 [common_util:64]INFO--Time taken to complete app ANALYTICAL_PRICE:::0.2721998691558838

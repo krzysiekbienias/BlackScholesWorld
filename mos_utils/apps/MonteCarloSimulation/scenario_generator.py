@@ -106,6 +106,7 @@ class ScenarioEquityRun(BaseApp):
             self._tab_name = ''
             self._paths_to_plot=''
 
+
             super().__init__(app_name, app_params)
 
         def plotEquityPaths(self,arr):
