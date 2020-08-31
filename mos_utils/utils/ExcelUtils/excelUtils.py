@@ -10,6 +10,7 @@ import xlsxwriter
 import xlrd
 from openpyxl import Workbook
 from openpyxl import load_workbook
+from openpyxl.drawing.image import Image
 from openpyxl.workbook.workbook import save_workbook
 from openpyxl.utils import get_column_letter
 import getpass
@@ -187,7 +188,7 @@ class OutputInExcel:
 
         writer.save()
 
-    def flexibleInsertingInput(self,cell_row,cell_col,value,tab_name):
+    def flexibleInsertingScalar(self,cell_row,cell_col,value,tab_name):
 
             writer = pd.ExcelWriter(self._sFileName, engine='openpyxl')
             writer.book = load_workbook(self._sFileName)
@@ -196,6 +197,28 @@ class OutputInExcel:
             cell=ws.cell(column=cell_col,row=cell_row)
             cell.value=value
             writer.save()
+
+    def insertRange(self,tab_name,iterativeObj,colIndicator):
+        writer = pd.ExcelWriter(self._sFileName, engine='openpyxl')
+        writer.book = load_workbook(self._sFileName)
+        ws = writer.book[tab_name]
+        for i in range(2,len(iterativeObj)-2):
+            cell = ws.cell(column=colIndicator, row=i)
+            cell.value=iterativeObj[i-2][0]
+        writer.save()
+
+    def insertPngFile(self,tab_name):
+        writer = pd.ExcelWriter(self._sFileName, engine='openpyxl')
+        writer.book = load_workbook(self._sFileName)
+
+        ws = writer.book[tab_name]
+        img=Image('OptionPrice.png')
+        ws.add_image(img,'I1')
+        writer.save()
+
+
+
+
 
 
 

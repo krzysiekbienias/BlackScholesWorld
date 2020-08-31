@@ -222,25 +222,34 @@ class AnalyticalRun(BaseApp):
         changeUnderlyingPriceShortMat = [o_black_scholes_short_maturity.black_scholes_price_fun() for o_black_scholes_short_maturity._S0 in prices_range]
         change_volShortMat = [o_black_scholes_short_maturity.black_scholes_price_fun() for o_black_scholes_short_maturity._sigma in vol_range]
 
-        option_price3m = [o_black_scholes_medium_maturity.black_scholes_price_fun() for o_black_scholes_medium_maturity._S0 in prices_range]
+        changeUnderlyingPriceMediumMat = [o_black_scholes_medium_maturity.black_scholes_price_fun() for o_black_scholes_medium_maturity._S0 in prices_range]
         change_vol3m = [o_black_scholes_medium_maturity.black_scholes_price_fun() for o_black_scholes_medium_maturity._sigma in vol_range]
 
-        option_price6m = [o_black_scholes_long_maturity.black_scholes_price_fun() for o_black_scholes_long_maturity._S0
+        changeUnderlyingPriceLongMat = [o_black_scholes_long_maturity.black_scholes_price_fun() for o_black_scholes_long_maturity._S0
                           in prices_range]
         change_vol6m = [o_black_scholes_long_maturity.black_scholes_price_fun() for o_black_scholes_long_maturity._sigma
                         in vol_range]
 
 
 
-
+        #################################----EXPORTING RESULTS TO EXCEL----#########################################
         excelExport = OutputInExcel(FileName='OptionPrice.xlsx', Path=self._control_path)
 
-        excelExport.flexibleInsertingInput(cell_col=6, cell_row=1, value=o_black_scholes_short_maturity.mblprice[0],
+        excelExport.flexibleInsertingScalar(cell_col=6, cell_row=1, value=o_black_scholes_short_maturity.mblprice[0],
                                            tab_name='INPUT_SM')
-        excelExport.flexibleInsertingInput(cell_col=6, cell_row=1, value=o_black_scholes_medium_maturity.mblprice[0],
+
+        excelExport.flexibleInsertingScalar(cell_col=6, cell_row=1, value=o_black_scholes_medium_maturity.mblprice[0],
                                            tab_name='INPUT_MM')
-        excelExport.flexibleInsertingInput(cell_col=6, cell_row=1, value=o_black_scholes_long_maturity.mblprice[0],
+        excelExport.flexibleInsertingScalar(cell_col=6, cell_row=1, value=o_black_scholes_long_maturity.mblprice[0],
                                            tab_name='INPUT_LM')
+
+        excelExport.insertRange(tab_name='RANGE',iterativeObj=changeUnderlyingPriceShortMat,colIndicator=5)
+        excelExport.insertRange(tab_name='RANGE',iterativeObj=changeUnderlyingPriceMediumMat,colIndicator=6)
+        excelExport.insertRange(tab_name='RANGE',iterativeObj=changeUnderlyingPriceLongMat,colIndicator=7)
+
+        excelExport.insertPngFile(tab_name="RANGE")
+
+        #################################----EXPORTING RESULTS TO EXCEL----#########################################
 
 
 
