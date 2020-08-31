@@ -111,8 +111,10 @@ class AnalyticalRun(BaseApp):
         self._tab_name3 =''
         self._tab_name4=''
         self._control_path=''
+        super().__init__(app_name, app_params)
+
         #################################----Load Control File----##################################
-        self.loadControlFile = CreateDataFrame(file_name='OptionPrice.xlsx')
+        self.loadControlFile = CreateDataFrame(file_name='OptionPrice.xlsx',path=self._control_path)
         self.dictionaryOfControlFile = self.loadControlFile.create_data_frame_from_excel()
         #################################----Load Control File----##################################
 
@@ -131,15 +133,11 @@ class AnalyticalRun(BaseApp):
         self.controlFilePriceChange = self.dictionaryOfControlFile['RANGE']['Price']
         self.controlFileVolChange = self.dictionaryOfControlFile['RANGE']['Volatility']
         #################################----Load Control File for Dynamic----##################################
-        super().__init__(app_name, app_params)
+
 
     def run(self):
-        os.chdir(self._control_path)
 
-        loadControlFile = CreateDataFrame(file_name='OptionPrice.xlsx')
-
-        dictionaryOfControlFile = loadControlFile.create_data_frame_from_excel()
-        o_black_scholes_10d = AnalyticBlackScholes(valuation_date=self.controlFilesShortMaturity.loc[0, 'Value'],
+        o_black_scholes_short_maturity = AnalyticBlackScholes(valuation_date=self.controlFilesShortMaturity.loc[0, 'Value'],
                                                    termination_date=self.controlFilesShortMaturity.loc[1, 'Value'],
                                                    schedule_freq=self.controlFilesShortMaturity.loc[2, 'Value'],
                                                    convention=self.controlFilesShortMaturity.loc[3, 'Value'],  # Daily,Monthly,Quarterly
@@ -158,18 +156,13 @@ class AnalyticalRun(BaseApp):
 
 
         ######################################----3Month Option Setting----############################
-
-
-
-
-
-        o_black_scholes_3m = AnalyticBlackScholes(valuation_date=self.controlFileMediumMaturity.loc[0, 'Value'],
+        o_black_scholes_medium_maturity = AnalyticBlackScholes(valuation_date=self.controlFileMediumMaturity.loc[0, 'Value'],
                                                   termination_date=self.controlFileMediumMaturity.loc[1, 'Value'],
                                                   schedule_freq=self.controlFileMediumMaturity.loc[2, 'Value'],
                                                   convention=self.controlFileMediumMaturity.loc[3, 'Value'],  # Daily,Monthly,Quarterly
-                                                  calendar=qlConverterMM.mqlCalendar,
-                                                  business_convention=qlConverterMM.mqlBusinessConvention,
-                                                  termination_business_convention=qlConverterMM.mqlTerminationBusinessConvention,
+                                                  calendar=self.qlConverterMM.mqlCalendar,
+                                                  business_convention=self.qlConverterMM.mqlBusinessConvention,
+                                                  termination_business_convention=self.qlConverterMM.mqlTerminationBusinessConvention,
                                                   date_generation=ql.DateGeneration.Forward,
                                                   end_of_month=self.controlFileMediumMaturity.loc[8, 'Value'],
                                                   ##################################
@@ -180,20 +173,20 @@ class AnalyticalRun(BaseApp):
                                                   ann_volatility=self.controlFileMediumMaturity.loc[13, 'Value'],
                                                   ann_dividend=self.controlFileMediumMaturity.loc[14, 'Value'])
         logger.info(f'We have defined one black scholes object For 3 months option')
-        logger.info(f'Current Price of underlying asset = {o_black_scholes_3m._S0}.')
+        logger.info(f'Current Price of underlying asset = {o_black_scholes_medium_maturity._S0}.')
 
-        logger.info(f' Annual volatility on the market is equal {o_black_scholes_3m._sigma}.')
-        logger.info(f' Annual risk on the market is equal {o_black_scholes_3m._r}.')
-        logger.info(f'Price is found on date {o_black_scholes_3m._svaluation_date}')
-        logger.info(f'Price is found on date {o_black_scholes_3m._stermination_date}')
-        logger.info(f'Annuity is calculated based on {o_black_scholes_3m.m_day_count} convention')
-        logger.info(f'Year fraction for this contract is equal {o_black_scholes_3m.consecutive_year_fractions()}')
-        logger.info(f' Analytical price of {o_black_scholes_3m._type_option} is equal {o_black_scholes_3m.mblprice}.')
+        logger.info(f' Annual volatility on the market is equal {o_black_scholes_medium_maturity._sigma}.')
+        logger.info(f' Annual risk on the market is equal {o_black_scholes_medium_maturity._r}.')
+        logger.info(f'Price is found on date {o_black_scholes_medium_maturity._svaluation_date}')
+        logger.info(f'Price is found on date {o_black_scholes_medium_maturity._stermination_date}')
+        logger.info(f'Annuity is calculated based on {o_black_scholes_medium_maturity.m_day_count} convention')
+        logger.info(f'Year fraction for this contract is equal {o_black_scholes_medium_maturity.consecutive_year_fractions()}')
+        logger.info(f' Analytical price of {o_black_scholes_medium_maturity._type_option} is equal {o_black_scholes_medium_maturity.mblprice}.')
         ######################################----3Month Option Setting----############################
 
 
         ######################################----6Month Option Setting----############################
-        o_black_scholes_6m = AnalyticBlackScholes(valuation_date=self.controlFileLongMaturity.loc[0, 'Value'],
+        o_black_scholes_long_maturity = AnalyticBlackScholes(valuation_date=self.controlFileLongMaturity.loc[0, 'Value'],
                                                   termination_date=self.controlFileLongMaturity.loc[1, 'Value'],
                                                   schedule_freq=self.controlFileLongMaturity.loc[2, 'Value'],
                                                   convention=self.controlFileLongMaturity.loc[3, 'Value'],  # Daily,Monthly,Quarterly
@@ -210,56 +203,48 @@ class AnalyticalRun(BaseApp):
                                                   ann_volatility=self.controlFileLongMaturity.loc[13, 'Value'],
                                                   ann_dividend=self.controlFileLongMaturity.loc[14, 'Value'])
         logger.info(f'We have defined one black scholes object For 3 months option')
-        logger.info(f'Current Price of underlying asset = {o_black_scholes_6m._S0}.')
+        logger.info(f'Current Price of underlying asset = {o_black_scholes_long_maturity._S0}.')
 
-        logger.info(f' Annual volatility on the market is equal {o_black_scholes_6m._sigma}.')
-        logger.info(f' Annual risk on the market is equal {o_black_scholes_6m._r}.')
-        logger.info(f'Price is found on date {o_black_scholes_6m._svaluation_date}')
-        logger.info(f'Price is found on date {o_black_scholes_6m._stermination_date}')
-        logger.info(f'Annuity is calculated based on {o_black_scholes_6m.m_day_count} convention')
-        logger.info(f'Year fraction for this contract is equal {o_black_scholes_6m.consecutive_year_fractions()}')
+        logger.info(f' Annual volatility on the market is equal {o_black_scholes_long_maturity._sigma}.')
+        logger.info(f' Annual risk on the market is equal {o_black_scholes_long_maturity._r}.')
+        logger.info(f'Price is found on date {o_black_scholes_long_maturity._svaluation_date}')
+        logger.info(f'Price is found on date {o_black_scholes_long_maturity._stermination_date}')
+        logger.info(f'Annuity is calculated based on {o_black_scholes_long_maturity.m_day_count} convention')
+        logger.info(f'Year fraction for this contract is equal {o_black_scholes_long_maturity.consecutive_year_fractions()}')
+        logger.info(f' Analytical price of {o_black_scholes_long_maturity._type_option} is equal {o_black_scholes_long_maturity.mblprice}.')
 
-        logger.info(f' Analytical price of {o_black_scholes_6m._type_option} is equal {o_black_scholes_6m.mblprice}.')
         ######################################----6Month Option Setting----############################
 
-        excelExport = OutputInExcel(FileName='OptionPrice.xlsx', Path=controlPath)
-
-        excelExport.flexibleInsertingInput(cell_col=6, cell_row=1, value=o_black_scholes_6m.mblprice[0], tab_name='INPUT_6M')
-
-        controlFileDynamic = dictionaryOfControlFile['Dynamic For Report']
-        o_black_scholes_Dynamic = AnalyticBlackScholes(valuation_date=controlFileDynamic.loc[0, 'Value'],
-                                                       termination_date=controlFileDynamic.loc[1, 'Value'],
-                                                       schedule_freq=controlFileDynamic.loc[2, 'Value'],
-                                                       convention=controlFileDynamic.loc[3, 'Value'],
-                                                       # Daily,Monthly,Quarterly
-                                                       calendar=qlConverter.mqlCalendar,
-                                                       business_convention=qlConverter.mqlBusinessConvention,
-                                                       termination_business_convention=qlConverter.mqlTerminationBusinessConvention,
-                                                       date_generation=ql.DateGeneration.Forward,
-                                                       end_of_month=controlFileDynamic.loc[8, 'Value'],
-                                                       ##################################
-                                                       type_option=controlFileDynamic.loc[9, 'Value'],
-                                                       current_price=controlFileDynamic.loc[10, 'Value'],
-                                                       strike=controlFileDynamic.loc[11, 'Value'],
-                                                       ann_risk_free_rate=controlFileDynamic.loc[12, 'Value'],
-                                                       ann_volatility=controlFileDynamic.loc[13, 'Value'],
-                                                       ann_dividend=controlFileDynamic.loc[14, 'Value'])
-
-        controlFilePriceChange = dictionaryOfControlFile['Range']['Price']
-        controlFileVolChange = dictionaryOfControlFile['Range']['Volatility']
-
-        prices_range = controlFilePriceChange.values
-        vol_range = controlFileVolChange.values
+        prices_range = self.controlFilePriceChange.values
+        vol_range = self.controlFileVolChange.values
         vol_range = vol_range[~np.isnan(vol_range)]
 
-        option_price10d = [o_black_scholes_10d.black_scholes_price_fun() for o_black_scholes_10d._S0 in prices_range]
-        change_vol10d = [o_black_scholes_10d.black_scholes_price_fun() for o_black_scholes_10d._sigma in vol_range]
+        changeUnderlyingPriceShortMat = [o_black_scholes_short_maturity.black_scholes_price_fun() for o_black_scholes_short_maturity._S0 in prices_range]
+        change_volShortMat = [o_black_scholes_short_maturity.black_scholes_price_fun() for o_black_scholes_short_maturity._sigma in vol_range]
 
-        option_price6m = [o_black_scholes_6m.black_scholes_price_fun() for o_black_scholes_6m._S0 in prices_range]
-        change_vol6m = [o_black_scholes_6m.black_scholes_price_fun() for o_black_scholes_6m._sigma in vol_range]
+        option_price3m = [o_black_scholes_medium_maturity.black_scholes_price_fun() for o_black_scholes_medium_maturity._S0 in prices_range]
+        change_vol3m = [o_black_scholes_medium_maturity.black_scholes_price_fun() for o_black_scholes_medium_maturity._sigma in vol_range]
 
-        option_price3m = [o_black_scholes_3m.black_scholes_price_fun() for o_black_scholes_3m._S0 in prices_range]
-        change_vol3m = [o_black_scholes_3m.black_scholes_price_fun() for o_black_scholes_3m._sigma in vol_range]
+        option_price6m = [o_black_scholes_long_maturity.black_scholes_price_fun() for o_black_scholes_long_maturity._S0
+                          in prices_range]
+        change_vol6m = [o_black_scholes_long_maturity.black_scholes_price_fun() for o_black_scholes_long_maturity._sigma
+                        in vol_range]
+
+
+
+
+        excelExport = OutputInExcel(FileName='OptionPrice.xlsx', Path=self._control_path)
+
+        excelExport.flexibleInsertingInput(cell_col=6, cell_row=1, value=o_black_scholes_short_maturity.mblprice[0],
+                                           tab_name='INPUT_SM')
+        excelExport.flexibleInsertingInput(cell_col=6, cell_row=1, value=o_black_scholes_medium_maturity.mblprice[0],
+                                           tab_name='INPUT_MM')
+        excelExport.flexibleInsertingInput(cell_col=6, cell_row=1, value=o_black_scholes_long_maturity.mblprice[0],
+                                           tab_name='INPUT_LM')
+
+
+
+
 
 
 

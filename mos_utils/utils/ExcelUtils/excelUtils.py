@@ -56,13 +56,15 @@ class ExcelFilesDetails():
 
 
 class CreateDataFrame:
-    def __init__(self, file_name: str, sheet_name=None, set_index=None):
+    def __init__(self,path, file_name: str, sheet_name=None, set_index=None):
+        self._path=path
         self._file_name = file_name
         self._sheet_name = sheet_name
         self._set_index = set_index
         self.mdf = self.create_data_frame_from_excel()
 
     def create_data_frame_from_excel(self):
+        os.chdir(self._path)
         listOfDfs = []
         if self._sheet_name == None:
             dfsFromExcel = pd.read_excel(self._file_name, sheet_name=None)
