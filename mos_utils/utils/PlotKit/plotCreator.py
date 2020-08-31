@@ -4,14 +4,16 @@ import matplotlib.pyplot as plt
 
 class PlotFinanceGraphs:
     def __init__(self):
+        pass
 
 
+    def menyPlots(self,arg,l_values,ls_labes,xAxisName,yAxisName,title,figName):
+        for i in range(len(l_values)):
+            plt.plot(arg, l_values[i], label=ls_labes[i])
 
-plt.plot(prices_range, option_price6m, label="6m to maturity")
-plt.plot(prices_range, option_price3m, label="3m to maturity")
-plt.plot(prices_range, option_price10d, label="10d to maturity")
-plt.xlabel("Spot Price")
-plt.ylabel("Option Price")
-plt.title("Relation price option to maturity")
-plt.legend()
-plt.savefig('OptionPrice.png')
+        plt.xlabel(xAxisName)
+        plt.ylabel(yAxisName)
+        plt.title(title)
+        plt.legend()
+        plt.savefig(figName+'png')
+
