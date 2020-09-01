@@ -15,6 +15,7 @@ from mos_utils.apps.base_app import BaseApp
 from mos_utils.utils.ExcelUtils.excelUtils import ExcelFilesDetails,CreateDataFrame,OutputInExcel
 from mos_utils.utils.quantLibUtil import QuantLibConverter
 import mos_utils.utils.logging_util as l_util
+from mos_utils.utils.PlotKit.plotCreator import PlotFinanceGraphs
 
 
 logger=l_util.get_logger(__name__)
@@ -246,10 +247,28 @@ class AnalyticalRun(BaseApp):
         excelExport.insertRange(tab_name='RANGE',iterativeObj=changeUnderlyingPriceShortMat,colIndicator=5)
         excelExport.insertRange(tab_name='RANGE',iterativeObj=changeUnderlyingPriceMediumMat,colIndicator=6)
         excelExport.insertRange(tab_name='RANGE',iterativeObj=changeUnderlyingPriceLongMat,colIndicator=7)
-
-        excelExport.insertPngFile(tab_name="RANGE")
-
         #################################----EXPORTING RESULTS TO EXCEL----#########################################
+
+        #################################----PREPARING PLOTS----#########################################
+        priceBehavior=PlotFinanceGraphs()
+        priceBehavior.manyPlots(arg=prices_range,l_values=[changeUnderlyingPriceShortMat,
+                                                           changeUnderlyingPriceMediumMat,
+                                                           changeUnderlyingPriceLongMat],
+                                                            ls_labes=['Short Maturity','Medium Maturity','Long Maturity'],
+                                                            figName='Price Behaviour',
+                                                            xAxisName='Equity Price',
+                                                            yAxisName='Option Price',
+                                                            title='Impact on Option Price')
+        excelExport.insertPngFile(tab_name="RANGE",image_name='Price Behaviour',anchore='I1')
+        #################################----PREPARING PLOTS----#########################################
+
+
+
+
+
+
+
+
 
 
 

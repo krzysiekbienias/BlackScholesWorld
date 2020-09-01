@@ -202,18 +202,18 @@ class OutputInExcel:
         writer = pd.ExcelWriter(self._sFileName, engine='openpyxl')
         writer.book = load_workbook(self._sFileName)
         ws = writer.book[tab_name]
-        for i in range(2,len(iterativeObj)-2):
+        for i in range(2,len(iterativeObj)+2):
             cell = ws.cell(column=colIndicator, row=i)
             cell.value=iterativeObj[i-2][0]
         writer.save()
 
-    def insertPngFile(self,tab_name):
+    def insertPngFile(self,tab_name,image_name,anchore):
         writer = pd.ExcelWriter(self._sFileName, engine='openpyxl')
         writer.book = load_workbook(self._sFileName)
 
         ws = writer.book[tab_name]
-        img=Image('OptionPrice.png')
-        ws.add_image(img,'I1')
+        img=Image(image_name+'.png')
+        ws.add_image(img,anchore)
         writer.save()
 
 
