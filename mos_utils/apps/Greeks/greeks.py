@@ -187,10 +187,40 @@ class GreeksRun(BaseApp):
         deltaMediumMaturChanheWRTSandT=[greeks_mm.delta() for greeks_mm._S0 in prices_range]
         deltaLongMaturChanheWRTSandT=[greeks_lm.delta() for greeks_lm._S0 in prices_range]
 
+        logger.info('Create OutputInExcel object to export results to excel file.')
         excelExport = OutputInExcel(FileName=self._file_name, Path=self._control_path)
-        logger.info('Insert Delta of short matirity contract to excel File')
-        excelExport.flexibleInsertingScalar(cell_col=6, cell_row=1, value=greeks_sm.m_delta[0],
+
+        logger.info('Insert Delta of short maturity of the contract to excel file.')
+        excelExport.flexibleInsertingScalar(cell_col=6, cell_row=2, value=greeks_sm.m_delta[0],
                                             tab_name=self._tab_name1)
+        logger.info('Insert Delta of medium maturity of the contract to excel file.')
+        excelExport.flexibleInsertingScalar(cell_col=6, cell_row=2, value=greeks_mm.m_delta[0],
+                                            tab_name=self._tab_name2)
+        logger.info('Insert Delta for long maturity of the contract to excel file.')
+        excelExport.flexibleInsertingScalar(cell_col=6, cell_row=2, value=greeks_lm.m_delta[0],
+                                            tab_name=self._tab_name3)
+
+
+        logger.info('Insert Gamma of short maturity of the contract to excel file.')
+        excelExport.flexibleInsertingScalar(cell_col=6, cell_row=3, value=greeks_sm.m_gamma[0],
+                                            tab_name=self._tab_name1)
+        logger.info('Insert Gamma of medium maturity of the contract to excel file.')
+        excelExport.flexibleInsertingScalar(cell_col=6, cell_row=3, value=greeks_mm.m_gamma[0],
+                                            tab_name=self._tab_name2)
+        logger.info('Insert Gamma for long maturity of the contract to excel file.')
+        excelExport.flexibleInsertingScalar(cell_col=6, cell_row=3, value=greeks_lm.m_gamma[0],
+                                            tab_name=self._tab_name3)
+
+        logger.info('Insert Vega of short maturity of the contract to excel file.')
+        excelExport.flexibleInsertingScalar(cell_col=6, cell_row=4, value=greeks_sm.m_vega[0],
+                                            tab_name=self._tab_name1)
+        logger.info('Insert Vega of medium maturity of the contract to excel file.')
+        excelExport.flexibleInsertingScalar(cell_col=6, cell_row=4, value=greeks_mm.m_vega[0],
+                                            tab_name=self._tab_name2)
+        logger.info('Insert Vega for long maturity of the contract to excel file.')
+        excelExport.flexibleInsertingScalar(cell_col=6, cell_row=4, value=greeks_lm.m_vega[0],
+                                            tab_name=self._tab_name3)
+
 
 
 
