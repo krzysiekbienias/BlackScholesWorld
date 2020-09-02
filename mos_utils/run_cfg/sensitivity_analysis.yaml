@@ -1,0 +1,5 @@
+TAB_NAME1: GREEKS_SM
+TAB_NAME2: GREEKS_MM
+TAB_NAME3: GREEKS_LM
+CONTROL_PATH: /Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/HelperFiles
+FILE_NAME: SensitivityAnalysis.xlsx

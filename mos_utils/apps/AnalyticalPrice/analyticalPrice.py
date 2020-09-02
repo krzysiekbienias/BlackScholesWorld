@@ -112,10 +112,11 @@ class AnalyticalRun(BaseApp):
         self._tab_name3 =''
         self._tab_name4=''
         self._control_path=''
+        self._file_name=''
         super().__init__(app_name, app_params)
 
         #################################----Load Control File----##################################
-        self.loadControlFile = CreateDataFrame(file_name='OptionPrice.xlsx',path=self._control_path)
+        self.loadControlFile = CreateDataFrame(file_name=self._file_name,path=self._control_path)
         self.dictionaryOfControlFile = self.loadControlFile.create_data_frame_from_excel()
         #################################----Load Control File----##################################
 
@@ -234,7 +235,7 @@ class AnalyticalRun(BaseApp):
 
 
         #################################----EXPORTING RESULTS TO EXCEL----#########################################
-        excelExport = OutputInExcel(FileName='OptionPrice.xlsx', Path=self._control_path)
+        excelExport = OutputInExcel(FileName=self._file_name, Path=self._control_path)
 
         excelExport.flexibleInsertingScalar(cell_col=6, cell_row=1, value=o_black_scholes_short_maturity.mblprice[0],
                                            tab_name='INPUT_SM')

@@ -3,3 +3,4 @@ TAB_NAME2: INPUT_MM
 TAB_NAME3: INPUT_LM
 TAB_NAME4: OPTION_PRICE_DYNAMIC
 CONTROL_PATH: /Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/HelperFiles
+FILE_NAME: OptionPrice.xlsx

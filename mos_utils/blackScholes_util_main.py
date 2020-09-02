@@ -34,3 +34,8 @@ RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_
 RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/scenario_generator_conf.yaml
 """
 
+"""
+--APP_NAME=SENSITIVITY_ANALYSIS
+--APP_PARAMS
+RUN_CFG=/Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/mos_utils/run_cfg/sensitivity_analysis.yaml
+"""
