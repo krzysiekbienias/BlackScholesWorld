@@ -198,11 +198,11 @@ class OutputInExcel:
             cell.value=value
             writer.save()
 
-    def insertRange(self,tab_name,iterativeObj,colIndicator):
+    def insertRange(self,tab_name,iterativeObj,colIndicator,startrow):
         writer = pd.ExcelWriter(self._sFileName, engine='openpyxl')
         writer.book = load_workbook(self._sFileName)
         ws = writer.book[tab_name]
-        for i in range(2,len(iterativeObj)+2):
+        for i in range(startrow,len(iterativeObj)+2):
             cell = ws.cell(column=colIndicator, row=i)
             cell.value=iterativeObj[i-2][0]
         writer.save()

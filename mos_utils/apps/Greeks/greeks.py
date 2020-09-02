@@ -183,9 +183,7 @@ class GreeksRun(BaseApp):
         prices_range = self.controlFilePriceChange.values
         vol_range = self.controlFileVolChange.values
 
-        deltaShortMaturChanheWRTSandT=[greeks_sm.delta() for greeks_sm._S0 in prices_range]
-        deltaMediumMaturChanheWRTSandT=[greeks_mm.delta() for greeks_mm._S0 in prices_range]
-        deltaLongMaturChanheWRTSandT=[greeks_lm.delta() for greeks_lm._S0 in prices_range]
+
 
         logger.info('Create OutputInExcel object to export results to excel file.')
         excelExport = OutputInExcel(FileName=self._file_name, Path=self._control_path)
@@ -220,6 +218,32 @@ class GreeksRun(BaseApp):
         logger.info('Insert Vega for long maturity of the contract to excel file.')
         excelExport.flexibleInsertingScalar(cell_col=6, cell_row=4, value=greeks_lm.m_vega[0],
                                             tab_name=self._tab_name3)
+
+        deltaShortMaturChanheWRTSandT = [greeks_sm.delta() for greeks_sm._S0 in prices_range]
+        deltaMediumMaturChanheWRTSandT = [greeks_mm.delta() for greeks_mm._S0 in prices_range]
+        deltaLongMaturChanheWRTSandT = [greeks_lm.delta() for greeks_lm._S0 in prices_range]
+
+        excelExport.insertRange(tab_name='DELTA_DYNAM',iterativeObj=deltaShortMaturChanheWRTSandT,colIndicator=1,startrow=2)
+        excelExport.insertRange(tab_name='DELTA_DYNAM',iterativeObj=deltaMediumMaturChanheWRTSandT,colIndicator=2,startrow=2)
+        excelExport.insertRange(tab_name='DELTA_DYNAM',iterativeObj=deltaLongMaturChanheWRTSandT,colIndicator=3,startrow=2)
+
+
+
+        greeksBehaviour=PlotFinanceGraphs()
+        greeksBehaviour.manyPlots(arg=prices_range,l_values=[deltaShortMaturChanheWRTSandT,
+                                                             deltaMediumMaturChanheWRTSandT,
+                                                             deltaLongMaturChanheWRTSandT],
+                                  ls_labes=['Delta Short Maturity',
+                                            'Delta Medium Maturity',
+                                            'Delta Long Maturity'],
+                                  figName='Delta Behaviour',
+                                  xAxisName='Underlying Price',
+                                  yAxisName='Delta',
+                                  title='Delta With Respect to Time')
+
+        excelExport.insertPngFile(tab_name='DELTA_DYNAM',image_name='Delta Behaviour',anchore='E1')
+
+
 
 
 

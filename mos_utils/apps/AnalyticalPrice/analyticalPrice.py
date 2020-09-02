@@ -245,9 +245,9 @@ class AnalyticalRun(BaseApp):
         excelExport.flexibleInsertingScalar(cell_col=6, cell_row=1, value=o_black_scholes_long_maturity.mblprice[0],
                                            tab_name='INPUT_LM')
 
-        excelExport.insertRange(tab_name='RANGE',iterativeObj=changeUnderlyingPriceShortMat,colIndicator=5)
-        excelExport.insertRange(tab_name='RANGE',iterativeObj=changeUnderlyingPriceMediumMat,colIndicator=6)
-        excelExport.insertRange(tab_name='RANGE',iterativeObj=changeUnderlyingPriceLongMat,colIndicator=7)
+        excelExport.insertRange(tab_name='RANGE',iterativeObj=changeUnderlyingPriceShortMat,colIndicator=5,startrow=2)
+        excelExport.insertRange(tab_name='RANGE',iterativeObj=changeUnderlyingPriceMediumMat,colIndicator=6,startrow=2)
+        excelExport.insertRange(tab_name='RANGE',iterativeObj=changeUnderlyingPriceLongMat,colIndicator=7,startrow=2)
         #################################----EXPORTING RESULTS TO EXCEL----#########################################
 
         #################################----PREPARING PLOTS----#########################################
