@@ -94,6 +94,52 @@ class AnalyticBlackScholes(SetUpSchedule):
         return price
 
 
+#It is suitable for
+class Black76(SetUpSchedule):
+        def __init__(self, valuation_date, termination_date, calendar, convention, schedule_freq, business_convention,
+                     termination_business_convention,
+                     date_generation, end_of_month, type_option, forward, strike, ann_risk_free_rate,
+                     ann_volatility,
+                     ann_dividend
+                     ):
+            SetUpSchedule.__init__(self, valuation_date, termination_date, calendar, business_convention,
+                                   termination_business_convention,
+                                   date_generation, end_of_month, convention, schedule_freq)
+            self._type_option = type_option  # call or put
+            self._F = forward
+            self._K = strike
+            self._r = ann_risk_free_rate
+            self._sigma = ann_volatility
+            self._divid = ann_dividend
+
+            self.mfd1 = self.d1Black76()
+            self.mfd2 = self.d2Black76()
+            self.blackprice = self.black76_price_fun()
+
+
+        def d1Black76(self):
+            d1 = (np.log(self._F / self._K) + (  0.5 * self._sigma ** 2) * self.ml_yf[0]) / (
+                             np.sqrt(self.ml_yf) * self._sigma)
+            return d1
+
+        def d2Black76(self):
+            d1 = (np.log(self._F / self._K) - (0.5 * self._sigma ** 2) * self.ml_yf[0]) / (
+                    np.sqrt(self.ml_yf) * self._sigma)
+            return d1
+        #TODO review the formula
+        def black76_price_fun(self):
+            if (self._type_option == 'call'):
+                price = self._F * np.exp(-self.ml_yf[0] * self._divid) * sc.stats.norm.cdf(
+                    self.d1Black76(), 0,
+                    1) - self._K * np.exp(
+                    -self.ml_yf[0] * self._r) * stats.norm.cdf(self.d2Black76(), 0, 1)
+            else:
+                price = self._K * np.exp(-self.ml_yf[0] * self._r) * stats.norm.cdf(-self.d2Black76(), 0,
+                                                                                    1) - self._F * np.exp(
+                    -self.ml_yf[0] * self._divid) * stats.norm.cdf(-self.d1Black76(), 0, 1)
+            return price
+
+
 ##Configuration
 """
 --APP_NAME=ANALYTICAL_PRICE
