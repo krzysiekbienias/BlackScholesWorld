@@ -16,6 +16,7 @@ from mos_utils.utils.ExcelUtils.excelUtils import ExcelFilesDetails,CreateDataFr
 from mos_utils.utils.quantLibUtil import QuantLibConverter
 import mos_utils.utils.logging_util as l_util
 from mos_utils.utils.PlotKit.plotCreator import PlotFinanceGraphs
+from mos_utils.utils.db_util import Connection
 
 
 logger=l_util.get_logger(__name__)
@@ -160,6 +161,7 @@ class AnalyticalRun(BaseApp):
         self._control_path=''
         self._file_name=''
         super().__init__(app_name, app_params)
+
 
         #################################----Load Control File----##################################
         self.loadControlFile = CreateDataFrame(file_name=self._file_name,path=self._control_path)

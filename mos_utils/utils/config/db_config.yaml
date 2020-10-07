@@ -1,0 +1,4 @@
+HOST: 127.0.0.1
+USER: root
+  DATABASE: sql_store
+  CREDENTIALS: /Users/krzysiekbienias/Documents/GitHub/BlackScholesWorld/HelperFiles/db_credentials.txt
